@@ -1,0 +1,12 @@
+
+.notification-dot{
+    color: hsl(1, 90%, 64%);/*red*/
+}
+
+.notification-read{
+    display: none;
+}
+
+.attribution{
+    display: none;
+}

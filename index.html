@@ -7,6 +7,11 @@
   <title>Notifications page</title>
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!--CSS reset stylesheet-->
+  <link rel="stylesheet" href="reset.css">
+  <!--CSS main stylesheet-->
+  <link rel="stylesheet" href="style.css">
   
 </head>
 <body>
@@ -16,17 +21,16 @@
       <h1>
         Notifications
       </h1>
-      <p>3</p>
+      <p class="js-notifications-number"></p>
 
-      <button>Mark all as read</button>
+      <button onclick="mark_all_as_read()">Mark all as read</button>
       
       
       <ul class="notifications_container">
-
         <li class="notification">
           <img src="assets/images/avatar-mark-webber.webp" alt="profile picture">
           <p>
-            <span class="name">Mark Webber</span> reacted to your recent post <span class="post">My first tournament today!</span>
+            <a class="notification-username" href="" onclick="mark_as_read(this)">Mark Webber</a> reacted to your recent post <a class="notification-post" href="" onclick="mark_as_read(this)">My first tournament today!</a> <span class="js-notification-dot notification-dot">•</span>
           </p>
           <p>
             1m ago
@@ -36,7 +40,7 @@
         <li class="notification">
           <img src="assets/images/avatar-angela-gray.webp" alt="profile picture">
           <p>
-            <span class="name">Angela Gray</span> followed you
+            <a class="notification-username" href="" onclick="mark_as_read(this)">Angela Gray</a> followed you <span class="js-notification-dot notification-dot">•</span>
           </p>
           <p>
             5m ago
@@ -46,7 +50,8 @@
         <li class="notification">
           <img src="assets/images/avatar-jacob-thompson.webp" alt="profile picture">
           <p>
-            <span class="name">Jacob Thompson</span> has joined your group <span class="group">Chess Club</span>
+            
+            <a class="notification-username" href="" onclick="mark_as_read(this)">Jacob Thompson</a> has joined your group <a class="notification-group" href="" onclick="mark_as_read(this)">Chess Club</a> <span class="js-notification-dot notification-dot">•</span>
           </p>
           <p>
             1 day ago
@@ -56,23 +61,23 @@
         <li class="notification">
           <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="profile picture">
           <p>
-            <span class="name">Rizky Hasanuddin</span> sent you a private message
+            <a class="notification-username" href="" onclick="mark_as_read(this)">Jacob Thompson</a> sent you a private message <span class="js-notification-dot notification-dot">•</span>
           </p>
           <p>
             5 days ago
           </p>
-          <p>
+          <a class="notification-message" href="" onclick="mark_as_read(this.previousElementSibling.previousElementSibling.firstElementChild)"> <!--this.previousElementSibling.previousElementSibling.firstElementChild is the a element with the username, we do this so the function works correctly and finds the correct js-notification-dot class-->
             Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
             I'm already having lots of fun and improving my game.
-          </p>
+          </a>
         </li>
 
         <li class="notification">
           <img src="assets/images/avatar-kimberly-smith.webp" alt="profile picture">
           <p>
-            <span class="name">Kimberly Smith</span> commented on your picture
+            <a class="notification-username" href="" onclick="mark_as_read(this)">Kimberly Smith</a> commented on your picture <span class="js-notification-dot notification-dot">•</span>
           </p>
-          <img src="assets/images/image-chess.webp" alt="girl playing chess">
+          <a class="notification-image" href="" onclick="mark_as_read(this.previousElementSibling.firstElementChild)"><img src="assets/images/image-chess.webp" alt="girl playing chess"></a> <!--this.previousElementSibling.firstElementChild is the a element with the username, we do this so the function works correctly and finds the correct js-notification-dot class-->
           <p>
             1 week ago
           </p>
@@ -81,7 +86,8 @@
         <li class="notification">
           <img src="assets/images/avatar-nathan-peterson.webp" alt="profile picture">
           <p>
-            <span class="name">Nathan Peterson</span> reacted to your recent post <span class="post">5 end-game strategies to increase your win rate</span>
+            
+            <a class="notification-username" href="" onclick="mark_as_read(this)">Nathan Peterson</a> reacted to your recent post <a class="notification-post" href="" onclick="mark_as_read(this)">5 end-game strategies to increase your win rate</a> <span class="js-notification-dot notification-dot">•</span>
           </p>
           <p>
             2 weeks ago
@@ -91,7 +97,7 @@
         <li class="notification">
           <img src="assets/images/avatar-anna-kim.webp" alt="profile picture">
           <p>
-            <span class="name">Anna Kim</span> left the group <span class="group">Chess Club</span>
+            <a class="notification-username" href="" onclick="mark_as_read(this)">Anna Kim</a> left the group <a class="notification-group" href="" onclick="mark_as_read(this)">Chess Club</a> <span class="js-notification-dot notification-dot">•</span>
           </p>
           <p>
             2 weeks ago
@@ -107,5 +113,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/LucasEPK">LucasEPK</a>.
   </div>
+
+  <script src="read_notifications.js"></script>
 </body>
 </html>
