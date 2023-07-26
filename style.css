@@ -77,6 +77,10 @@ ul {
     color: hsl(219, 12%, 42%);/*Dark grayish blue*/
 }
 
+.notification-read{
+    background-color: transparent;
+}
+
 .notification-pfp{
     grid-area: 1/1/3/2;
 
@@ -107,7 +111,7 @@ ul {
     color: hsl(1, 90%, 64%);/*red*/
 }
 
-.notification-read{
+.notification-dot-read{
     display: none;
 }
 
