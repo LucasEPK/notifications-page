@@ -118,6 +118,7 @@ ul {
 .notification-pm{
     grid-area: 3/2/3/3;
 
+    margin-top: 10px;
     padding: 15px;
     text-decoration: none;
     color: hsl(219, 12%, 42%);/*Dark grayish blue*/
@@ -142,7 +143,7 @@ ul {
 .notification-post{
     font-weight: 800;
     text-decoration: none;
-    color: hsl(219, 12%, 42%);
+    color: hsl(219, 12%, 42%);/*Dark grayish blue*/
 }
 
 .notification-group{
@@ -153,4 +154,79 @@ ul {
 
 .attribution{
     display: none;
+}
+
+/*-------------------------------------------DESKTOP STYLE-----------------------------------------------------*/
+@media(min-width: 800px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: hsl(210, 60%, 98%);/*Very light grayish blue*/
+    }
+
+    .container{
+        padding: 30px;
+        width: 53vw;
+        border-radius: 15px;
+    }
+
+    .notifications_header{
+        margin: 0 0 20px 0;
+    }
+
+    .notification-h1-number{
+        align-items: center;
+    }
+
+    .notifications-h1{
+        font-size: 1.5rem;
+    }
+
+    .notifications-button{
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .notifications-button:hover{
+        color: hsl(219, 85%, 26%);/*Blue*/
+    }
+
+    .notification{
+        grid-template-columns: 1fr 10fr;
+        font-size: 1rem;
+    }
+
+    .notification-username:hover{
+        color: hsl(219, 85%, 26%);/*Blue*/
+    }
+
+    .notification-post:hover{
+        color: hsl(219, 85%, 26%);/*Blue*/
+    }
+
+    .notification-pfp{
+        height: 45px;
+    }
+
+    .notification-pm:hover{
+        background-color: hsl(211, 68%, 94%);/*Light grayish blue 1*/
+    }
+
+    .notification-image{
+        border-radius: 5px;
+    }
+
+    .notification-image:hover{
+        outline: 2px solid hsl(205, 33%, 90%);
+    }
+
+    .notification-image img{
+        height: 45px;
+    }
+
+    .notification-with_image{
+        grid-template-columns: 1fr 8.5fr 1fr;/*this aligns the text and images like the other notifications*/
+    }
 }
